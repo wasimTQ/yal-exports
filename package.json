@@ -1,0 +1,17 @@
+{
+  "name": "yal-exports",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "dev": "nuxt",
+    "build": "nuxt build",
+    "start": "nuxt start",
+    "generate": "nuxt generate"
+  },
+  "dependencies": {
+    "core-js": "^3.6.5",
+    "emailjs-com": "^2.6.3",
+    "nuxt": "^2.14.5"
+  },
+  "devDependencies": {}
+}
