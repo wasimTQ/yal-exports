@@ -8,9 +8,31 @@ export default {
     meta: [
       { charset: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
-      { hid: "description", name: "description", content: "" }
+      {
+        hid: "description",
+        name: "description",
+        content:
+          "Yal is a exporting company based on Tamil Nadu. We are exporting all types of goods. Our speciality is Ayurvedic and Medicinal products"
+      },
+      {
+        name: "keywords",
+        content: "Exports, Imports, Foreign, Ayurvedic, Medicinal, Landscaping"
+      },
+      {
+        name: "geo.position",
+        content: "10.033618963659716; 78.33607077598573"
+      },
+      { name: "geo.placename", content: "Melur" },
+      { name: "geo.region", content: "IN-TN" }
     ],
-    link: [{ rel: "icon", type: "image/x-icon", href: "/favicon.ico" }]
+    link: [
+      { rel: "icon", type: "image/x-icon", href: "/favicon.ico" },
+      {
+        rel: "stylesheet",
+        href:
+          "https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;700;800&family=Montserrat:wght@400;500;600&display=swap"
+      }
+    ]
   },
 
   // Global CSS (https://go.nuxtjs.dev/config-css)
