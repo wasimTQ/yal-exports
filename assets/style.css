@@ -45,6 +45,7 @@
     -ms-flex-pack: center;
     justify-content: center;
     margin-bottom: 5em;
+    font-size: 0.8rem;
   }
   body nav div > img {
     width: 30%;
@@ -64,7 +65,11 @@
   body #header .product-wrapper .header-img img {
     width: 90%;
     -webkit-transform: translateX(0);
-    transform: translateX(0);
+    transform: translateX(0) scale(1.25);
+  }
+
+  .nav-active {
+    color: #e24e44;
   }
   body #header .wrapper {
     display: -webkit-box;
@@ -76,6 +81,10 @@
     flex-direction: column;
   }
   body #header .wrapper .header-img svg {
+    margin-left: -3em;
+    z-index: -1;
+  }
+  body #header .wrapper .header-img img {
     margin-left: -3em;
     z-index: -1;
   }
@@ -177,6 +186,14 @@
 }
 
 @media screen and (max-width: 360px) {
+  body .others .img-wrapper {
+    grid-template-columns: repeat(1, 1fr);
+    grid-row-gap: 1em;
+  }
+  body .others .grid-2 {
+    grid-template-columns: repeat(1, 1fr);
+    grid-row-gap: 1em;
+  }
   body {
     font-size: 12px;
   }
@@ -250,13 +267,19 @@
     display: inline;
   }
   body nav .hamburger {
+    cursor: pointer;
     position: relative;
-    top: 1.5em;
-    -webkit-box-align: center;
+    top: 1em;
+    /* -webkit-box-align: center;
     -ms-flex-align: center;
-    align-items: center;
+    align-items: center; */
+  }
+  body nav .hamburger svg {
+    width: 1.75rem;
+    height: 1.75rem;
   }
   body nav .hamburger div {
+    cursor: pointer;
     width: 3em;
     background: black;
     margin-bottom: 0.25em;
@@ -284,13 +307,13 @@
     justify-content: space-evenly;
     justify-items: flex-start;
     margin-top: 5em;
-    background: cornflowerblue;
+    background: rgb(108, 153, 236);
     padding-right: 3em;
     width: 100vw;
     height: 80vh;
     -webkit-transform: scaleY(1);
     transform: scaleY(1);
-    z-index: 21;
+    z-index: 200;
     left: 0;
     pointer-events: none;
     display: none;
@@ -328,6 +351,7 @@
     align-items: center;
     -webkit-transform-origin: top;
     transform-origin: top;
+    display: none;
   }
   body nav ul li.contact-btn a {
     position: relative;
@@ -360,7 +384,7 @@
   body #header .wrapper .text h2::after {
     width: 8em;
   }
-  body #header .wrapper .header-img svg {
+  body #header .wrapper .header-img img {
     position: absolute;
     width: 370px;
     height: 70vh;
@@ -389,6 +413,7 @@
     -webkit-box-ordinal-group: 3;
     -ms-flex-order: 2;
     order: 2;
+    width: 100%;
   }
   body #header .product-wrapper .header-img {
     -webkit-box-ordinal-group: 2;
@@ -540,9 +565,11 @@
   body #more-products {
     -ms-grid-columns: 100%;
     grid-template-columns: 100%;
+    grid-column-gap: 0.5em;
   }
   body #more-products #otherproducts {
     margin-left: 0;
+    grid-template-columns: 100%;
   }
 }
 
@@ -636,7 +663,7 @@ nav ul li {
 
 nav ul li a {
   appearance: none;
-  font-size: 1.1em;
+  font-size: 1em;
   font-weight: 500;
   text-decoration: none;
   color: black;
@@ -1196,7 +1223,7 @@ body {
 
 footer {
   margin-top: 1em;
-  background: #e0ff55;
+  background: #edff4c;
   padding: 2.5em 2em;
   border-top-left-radius: 30px;
   border-top-right-radius: 30px;
@@ -1902,3 +1929,54 @@ footer #footer .contact {
   font-weight: 700;
 }
 /*# sourceMappingURL=style.css.map */
+
+.others {
+  min-height: 100vh;
+  padding: 3em;
+  text-align: center;
+}
+.others h1 {
+  font-size: 3rem;
+  font-family: "Playfair Display";
+}
+
+.others h1 span {
+  font-size: 100%;
+  color: #e24e44;
+}
+.others .img-wrapper {
+  margin-top: 2.5rem;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-column-gap: 1em;
+}
+.others .img-wrapper img {
+  width: 100%;
+  height: 350px;
+  outline: 5px solid salmon;
+  outline-offset: -15px;
+}
+.others .grid-2 {
+  margin-top: 1em;
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-column-gap: 1em;
+}
+.others .grid-2 div {
+  width: 100%;
+  height: 350px;
+}
+.copper-1 {
+  background: url("./scraping/copper_scrape.webp");
+}
+.copper-2 {
+  background: url("./scraping/copper_scrape_2.webp");
+}
+/* .colspan-2 {
+  grid-column: 1 / span 2;
+}
+.colspan-3 {
+  grid-column: 2 / span 2;
+  width: 100%;
+} */

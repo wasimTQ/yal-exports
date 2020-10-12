@@ -26,6 +26,11 @@
               <nuxt-link to="/landscape">Landscaping</nuxt-link>
             </a>
           </li>
+          <li>
+            <a>
+              <nuxt-link to="/scrap">Scrap Products</nuxt-link>
+            </a>
+          </li>
         </ul>
       </div>
       <div>
