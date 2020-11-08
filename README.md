@@ -1,2 +1,2 @@
 # yal-exports
- check our [yalexports.in](https://yalexport.in/) website
+ check our [yalexport.in](https://yalexport.in/) website
